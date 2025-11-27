@@ -2,7 +2,7 @@
 # COM MT 
 #   Projet de développement Python 
 #   Gestionnaire d'utilisateurs d'une piscine 
-#
+#ludo le nullos
 
 print("--- Gestionnaire d'utilisateurs d'une piscine ---")
 
