@@ -17,10 +17,11 @@ while commande != 'exit':
         a = input("Qui nage ? ")
         b = input("quelle nage ? ")
         c = input("combien de longueur ? ")
-        liste.append((a,b,c))
+        d = input("Quel jour ? YY_MM_DD")
+        liste.append((a,b,c,d))
 #salam
     if commande == 'liste':
-        for nageur, nage, longeur in liste:
-            print(f"Prénom {nageur}, nage {nage}, longueur {longeur}")
+        for nageur, nage, longeur, date in liste:
+            print(f"Prénom {nageur}, nage {nage}, longueur {longeur} date {date}")
 
 # MT 
