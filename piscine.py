@@ -1,13 +1,15 @@
 print("--- Gestionnaire d'utilisateurs d'une piscine ---")
 
+liste_nageurs = ["Pierre", "Léa", "Michel"]
+
 liste = [
-    ("Léa",    "brasse", 15, "25-11-24"),
-    ("Pierre", "Brasse", 9,  "25-11-24"),
-    ("Michel", "crawl",  8,  "25-11-26"),
-    ("Léa",    "crawl",  10, "25-11-25"),
-    ("Pierre", "Dos",    9,  "25-11-26"),
-    ("Michel", "Brasse", 9,  "25-11-26"),
-    ("Michel", "Brasse", 7,  "25-11-27")
+    (1, "Brasse", 15, "25-11-24"),
+    (0, "Brasse", 9,  "25-11-24"),
+    (2, "Crawl",   8,  "25-11-26"),
+    (1, "Crawl",  10, "25-11-25"),
+    (0, "Dos",     9,  "25-11-26"),
+    (1, "Brasse",  9,  "25-11-26"),
+    (2, "Brasse",  7,  "25-11-27")
 ]
 commande = ''
 
@@ -15,10 +17,23 @@ while commande != 'exit':
     commande = input("Que faut-il faire ? ")
 
     if commande == 'ajout':
-        a = input("Qui nage ? ").strip().lower().capitalize()
-        b = input("quelle nage ? ").strip().lower().capitalize()
-        c = input("combien de longueur ? ")
+        """
+        nom = input("Qui nage ? ").strip().lower().capitalize()
+
+        if nom in liste_nageurs:
+            a = liste_nageurs.index(nom)
+        else:
+            print("Ce nageur n'existe pas dans la liste.")
+            continue
+        """
+        for id, nageur in enumerate(liste_nageurs):
+            print(f"{id}->{nageur}")
+        a = int(input("Qui nage?"))
+
+        b = input("Quelle nage ? ").strip().lower().capitalize()
+        c = input("Combien de longueurs ? ")
         d = input("Quel jour ? YY_MM_DD")
+
         liste.append((a, b, c, d))
 
     if commande == 'liste':
