@@ -20,20 +20,19 @@ while commande != 'exit':
         # ton bloc chelou qui ré-ajoute encore un truc après la liste (je le laisse)
         b = input("Quelle nage ? ").strip().lower().capitalize()
         c = input("Combien de longueurs ? ")
-        d = input("Quel jour ? (JJ/MM/AAAA) ")
+        d = input("Quelle date ? (format JJ/MM/AAAA) ")
         liste.append((a, b, c, d))
-        print("Ajout effectué.")
 
     if commande == 'liste':
         for nageur, nage, longueur, date in liste:
-            print(f"{date} - Prénom : {nageur}, Nage : {nage}, Longueurs : {longueur}")
+            print(f"{date} - Prénom {nageur}, nage {nage}, longueurs {longueur}")
 
     if commande == 'nage':
         nage_recherchee = input("Quelle nage ? ").strip().lower().capitalize()
         trouve = False
         for elt in liste:
-            if elt[1].lower() == nage_recherchee.lower():
-                print(f"{elt[0]} pratique cette nage {elt[1]} : {elt[2]} longueurs le {elt[3]}")
+            if elt[1] == nage_recherchee:
+                print(f"{elt[0]} pratique cette nage ({elt[2]} longueurs) le {elt[3]}")
                 trouve = True
         if not trouve:
             print("Aucun nageur trouvé pour cette nage.")
@@ -137,3 +136,6 @@ while commande != 'exit':
                 trouve = True
         if not trouve:
             print("Aucune activité trouvée à cette date.")
+
+
+
