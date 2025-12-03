@@ -78,9 +78,6 @@ while commande != 'exit':
 
 
 
-<<<<<<< HEAD
-l
-=======
 # MT commande == 'nageur' 
 """ 
 while commande != 'exit':
@@ -147,4 +144,3 @@ while commande != 'exit':
 
 
 
->>>>>>> 40aba2137de1ef576e69a45020a5c715e1ddb246
