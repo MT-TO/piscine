@@ -6,7 +6,8 @@ liste = [
     ("Michel", "crawl",  8,  "25-11-26"),
     ("Léa",    "crawl",  10, "25-11-25"),
     ("Pierre", "Dos",    9,  "25-11-26"),
-    ("Michel", "Brasse", 9,  "25-11-26")
+    ("Michel", "Brasse", 9,  "25-11-26"),
+    ("Michel", "Brasse", 7,  "25-11-27")
 ]
 commande = ''
 
